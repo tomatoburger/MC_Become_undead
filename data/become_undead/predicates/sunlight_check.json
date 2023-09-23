@@ -1,0 +1,69 @@
+[
+  {
+    "condition": "minecraft:all_of",
+    "terms": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"undead\"]}"
+        }
+      },
+      {
+        "condition": "minecraft:weather_check",
+        "raining": false,
+        "thundering": false
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetY": 2,
+        "predicate": {
+          "light": {
+            "light": 15
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetY": 1,
+        "predicate": {
+          "light": {
+            "light": 15
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "predicate": {
+          "light": {
+            "light": 15
+          }
+        }
+      },
+      {
+        "condition": "minecraft:inverted",
+        "term": {
+          "condition": "minecraft:location_check",
+          "offsetY": 2,
+          "predicate": {
+            "block": {
+              "blocks": [
+                "minecraft:glowstone",
+                "minecraft:sea_lantern",
+                "minecraft:jack_o_lantern",
+                "minecraft:redstone_lamp",
+                "minecraft:beacon",
+                "minecraft:campfire",
+                "minecraft:shroomlight",
+                "minecraft:ochre_froglight",
+                "minecraft:pearlescent_froglight",
+                "minecraft:verdant_froglight",
+                "minecraft:respawn_anchor"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+]
